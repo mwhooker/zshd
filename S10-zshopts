@@ -1,0 +1,22 @@
+#!/usr/bin/env zsh
+
+# setopt NOHUP
+# setopt NOTIFY
+# setopt NO_FLOW_CONTROL
+# setopt AUTO_LIST		# these two should be turned off
+# setopt AUTO_REMOVE_SLASH
+# setopt AUTO_RESUME		# tries to resume command of same name
+unsetopt BG_NICE		# do NOT nice bg commands
+setopt CORRECT			# command CORRECTION
+# setopt HASH_CMDS		# turns on hashing
+setopt ALL_EXPORT
+setopt vi
+
+setopt MENUCOMPLETE
+setopt IGNORE_EOF
+# Set/unset  shell options
+setopt   notify globdots correct pushdtohome cdablevars autolist
+setopt   correctall autocd recexact longlistjobs
+setopt   histignoredups pushdsilent noclobber
+setopt   autopushd pushdminus extendedglob rcquotes mailwarning
+unsetopt autoparamslash

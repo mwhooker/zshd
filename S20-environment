@@ -1,0 +1,48 @@
+#!/usr/bin/env zsh
+
+
+# default editor
+export EDITOR=vim
+
+export PATH="${HOME}/bin:${PATH}"
+export PATH="${HOME}/usr/bin:${PATH}"
+export PATH="${PATH}:/usr/sbin"
+
+export ZSHD_PATH="${HOME}/.zshd"
+
+# fix ssh sign useing the key
+# https://bugs.launchpad.net/ubuntu/+source/openssh/+bug/201786
+export SSH_AUTH_SOCK=0
+
+
+
+export TZ="America/New_York"
+export HOSTNAME="`hostname`"
+export PAGER='less'
+export PS1="[$PR_MAGENTA%n$PR_NO_COLOR@$PR_GREEN%U%m%u$PR_NO_COLOR:$PR_RED%2c$PR_NO_COLOR]%(!.#.$) "
+export RPS1="$PR_MAGENTA(%D{%m-%d %H:%M})$PR_NO_COLOR"
+export LC_ALL='en_US.UTF-8'
+export LANG='en_US.UTF-8'
+export LC_CTYPE=C
+export DISPLAY=:0
+
+if [ $SSH_TTY ]; then
+  MUTT_EDITOR=vim
+else
+  MUTT_EDITOR=emacsclient.emacs-snapshot
+fi
+
+unsetopt ALL_EXPORT
+
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+     precmd () {print -Pn "\e]0;%n@%m: %~\a"}
+        ;;
+esac
+
+autoload colors 
+colors
+autoload -U compinit
+compinit

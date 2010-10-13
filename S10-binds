@@ -1,0 +1,4 @@
+bindkey ' ' magic-space    # also do history expansion on space
+bindkey '^I' complete-word # complete on tab, leave expansion to _expand
+bindkey -v
+bindkey "^[[3~" delete-char

@@ -1,0 +1,15 @@
+setopt APPEND_HISTORY
+setopt EXTENDED_HISTORY		# puts timestamps in the history
+setopt HIST_ALLOW_CLOBBER
+setopt HIST_REDUCE_BLANKS
+setopt INC_APPEND_HISTORY SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+
+HISTFILE=$HOME/.zhistory
+HISTSIZE=10000
+SAVEHIST=10000
+
+bindkey '^r' history-incremental-search-backward
+
+#bindkey "^[[5~" up-line-or-history
+#bindkey "^[[6~" down-line-or-history
