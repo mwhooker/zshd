@@ -8,7 +8,7 @@ export PATH="${HOME}/bin:${PATH}"
 export PATH="${HOME}/usr/bin:${PATH}"
 export PATH="${PATH}:/usr/sbin"
 
-export ZSHD_PATH="${HOME}/.zshd"
+export ZSHD_PATH="${HOME}/.zsh.d"
 
 # fix ssh sign useing the key
 # https://bugs.launchpad.net/ubuntu/+source/openssh/+bug/201786
@@ -19,8 +19,6 @@ export SSH_AUTH_SOCK=0
 export TZ="America/New_York"
 export HOSTNAME="`hostname`"
 export PAGER='less'
-export PS1="[$PR_MAGENTA%n$PR_NO_COLOR@$PR_GREEN%U%m%u$PR_NO_COLOR:$PR_RED%2c$PR_NO_COLOR]%(!.#.$) "
-export RPS1="$PR_MAGENTA(%D{%m-%d %H:%M})$PR_NO_COLOR"
 export LC_ALL='en_US.UTF-8'
 export LANG='en_US.UTF-8'
 export LC_CTYPE=C
