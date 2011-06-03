@@ -8,6 +8,7 @@ export PATH="/sbin:${PATH}"
 export PATH="${HOME}/bin:${PATH}"
 export PATH="${HOME}/usr/bin:${PATH}"
 export PATH="${PATH}:/usr/sbin"
+export PATH="${PATH}:${HOME}/.gem/ruby/1.8/bin"
 
 export ZSHD_PATH="${HOME}/.zsh.d"
 
