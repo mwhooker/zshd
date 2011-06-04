@@ -11,6 +11,7 @@ export PATH="${PATH}:/usr/sbin"
 export PATH="${PATH}:${HOME}/.gem/ruby/1.8/bin"
 
 export ZSHD_PATH="${HOME}/.zsh.d"
+export GEM_HOME="${HOME}/.gem/ruby/1.8"
 
 # fix ssh sign useing the key
 # https://bugs.launchpad.net/ubuntu/+source/openssh/+bug/201786
