@@ -18,7 +18,9 @@ export GEM_HOME="${HOME}/.gem/ruby/1.8"
 # https://bugs.launchpad.net/ubuntu/+source/openssh/+bug/201786
 export SSH_AUTH_SOCK=0
 
-
+#xcode 4 bullshit -
+#http://stackoverflow.com/questions/5944332/broken-pipe-error-when-using-pip-to-install-pycrypto-on-mac-os-x
+export ARCHFLAGS='-arch i386 -arch x86_64'
 
 export TZ="America/New_York"
 export HOSTNAME="`hostname`"
