@@ -1,0 +1,14 @@
+#!/use/bin/env zsh
+
+AGENT_FILE="${HOME}/bin/agent-env"
+
+ps -x -u ${USER} | egrep -q "[s]sh-agent"
+
+if [[ $? != 0 ]]; then
+    echo "creating ssh-agent in $AGENT_FILE"
+    if [[ -f $AGENT_FILE ]]; then
+        rm $AGENT_FILE
+    fi
+    ssh-agent | grep -v "^echo" > $AGENT_FILE
+fi
+source ${HOME}/bin/agent-env
