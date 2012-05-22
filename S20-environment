@@ -11,6 +11,7 @@ export PATH="${HOME}/usr/bin:${PATH}"
 export PATH="${PATH}:/usr/sbin"
 export PATH="${PATH}:${HOME}/.gem/ruby/1.8/bin"
 
+export JAVA_HOME=$(/usr/libexec/java_home)
 if [ -f "${HOME}/Library/Haskell/bin" ]; then
     export PATH="${PATH}:${HOME}/Library/Haskell/bin"
 fi
@@ -26,7 +27,7 @@ export SSH_AUTH_SOCK=0
 #http://stackoverflow.com/questions/5944332/broken-pipe-error-when-using-pip-to-install-pycrypto-on-mac-os-x
 export ARCHFLAGS='-arch i386 -arch x86_64'
 
-export TZ="America/New_York"
+export TZ="America/Los_Angeles"
 export HOSTNAME="`hostname`"
 export PAGER='less'
 export LC_ALL='en_US.UTF-8'
