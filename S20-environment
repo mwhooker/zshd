@@ -11,7 +11,6 @@ export PATH="${HOME}/usr/bin:${PATH}"
 export PATH="${PATH}:/usr/sbin"
 export PATH="${PATH}:${HOME}/.gem/ruby/1.8/bin"
 
-export JAVA_HOME=$(/usr/libexec/java_home)
 if [ -f "${HOME}/Library/Haskell/bin" ]; then
     export PATH="${PATH}:${HOME}/Library/Haskell/bin"
 fi

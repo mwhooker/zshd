@@ -1,1 +1,4 @@
+#!/usr/bin/env zsh
+
 export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
+export JAVA_HOME=$(/usr/libexec/java_home)
