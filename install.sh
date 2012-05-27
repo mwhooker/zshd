@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ "`echo $0 | cut -c1`" = "/" ]; then
     ZSHD_PATH=`dirname $0`
