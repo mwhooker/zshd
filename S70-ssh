@@ -1,6 +1,6 @@
 #!/use/bin/env zsh
 
-AGENT_FILE="${HOME}/bin/agent-env"
+AGENT_FILE="${TMPPREFIX}-${USER}-agent-env"
 
 ps ux | grep ssh-agent | grep $USER | egrep -q "[s]sh-agent"
 
@@ -11,4 +11,5 @@ if [[ $? != 0 ]]; then
     fi
     ssh-agent | grep -v "^echo" > $AGENT_FILE
 fi
-source ${HOME}/bin/agent-env
+
+source $AGENT_FILE
