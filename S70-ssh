@@ -2,7 +2,7 @@
 
 AGENT_FILE="${TMPPREFIX}-${USER}-agent-env"
 
-ps ux | grep ssh-agent | grep $USER | egrep -q "[s]sh-agent"
+ps ux | grep ssh-agent | grep $USER | egrep "[s]sh-agent" | egrep -vq grep
 
 if [[ $? != 0 ]]; then
     echo "creating ssh-agent in $AGENT_FILE"
