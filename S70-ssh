@@ -1,6 +1,6 @@
 #!/use/bin/env zsh
 
-AGENT_FILE="${TMPPREFIX}-${USER}-agent-env"
+AGENT_FILE="${TMPDIR}-${USER}-agent-env"
 
 ps ux | grep ssh-agent | grep $USER | egrep "[s]sh-agent" | egrep -vq grep
 
