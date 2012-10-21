@@ -6,12 +6,12 @@ else
     ZSHD_PATH=$(dirname `pwd`/`echo $0 | cut -c3-`)
 fi
 
-if [ -L ~/.zshrc ]; then
-    unlink ~/.zshrc
+if [ -L $HOME/.zshrc ]; then
+    unlink $HOME/.zshrc
 fi
 
-if [ -L ~/.zshd ]; then
-    unlink ~/.zshd
+if [ -L $HOME/.zsh.d ]; then
+    unlink $HOME/.zsh.d
 fi
 
 ln -s ${ZSHD_PATH}/zshrc ${HOME}/.zshrc
