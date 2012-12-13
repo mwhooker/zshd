@@ -18,6 +18,9 @@ fi
 export ZSHD_PATH="${HOME}/.zsh.d"
 export GEM_HOME="${HOME}/.gem/ruby/1.8"
 
+export EC2_HOME="${HOME}/ec2-api-tools"
+export PATH=$PATH:$EC2_HOME/bin
+
 # fix ssh sign useing the key
 # https://bugs.launchpad.net/ubuntu/+source/openssh/+bug/201786
 export SSH_AUTH_SOCK=0
