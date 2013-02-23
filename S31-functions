@@ -30,3 +30,12 @@ gg_replace() {
   gg_dasherize() {
     gg_replace $1 `echo $1 | sed -e 's/_/-/g'` $2
   }
+
+function breakvpn() {
+    gw=`netstat -arn | grep "^default" | awk '{print $2}'`
+    while [[ "$#" -gt "0" ]]; do
+        sudo route delete $1
+        sudo route add $1 $gw
+        shift
+    done
+}
