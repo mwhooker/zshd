@@ -16,3 +16,7 @@ fi
 
 ln -s ${ZSHD_PATH}/zshrc ${HOME}/.zshrc
 ln -s ${ZSHD_PATH} ${HOME}/.zsh.d
+
+if [ -f /usr/local/share/zsh/site-functions/_git ]; then
+    echo "you may need to unlink git functions from site-functions."
+fi
