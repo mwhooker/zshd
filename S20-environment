@@ -9,6 +9,7 @@ export PATH="/sbin:${PATH}"
 export PATH="${HOME}/bin:${PATH}"
 export PATH="${HOME}/usr/bin:${PATH}"
 export PATH="${PATH}:/usr/sbin"
+export GOPATH="${HOME}/.go"
 
 if [ -f "${HOME}/Library/Haskell/bin" ]; then
     export PATH="${PATH}:${HOME}/Library/Haskell/bin"
@@ -41,7 +42,6 @@ fi
 
 unsetopt ALL_EXPORT
 
-
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
@@ -53,3 +53,12 @@ autoload colors
 colors
 autoload -U compinit
 compinit
+
+SYS_SNIPPLET=/usr/local/share/zsh/site-functions
+
+if [ -d $SYS_SNIPPLET ]; then
+    for zshrc_snipplet in $SYS_SNIPPLET/* ; do
+        source $zshrc_snipplet
+    done
+fi
+unset zshrc_snipplet
