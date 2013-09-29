@@ -1,4 +1,6 @@
-#!/use/bin/env zsh
+#!/usr/bin/env zsh
+
+USER=`whoami`
 
 AGENT_FILE="${TMPDIR}/${USER}-agent-env"
 
