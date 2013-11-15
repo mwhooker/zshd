@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+
+function relative_go()
+{
+    if [ -d `pwd`/.go ]; then
+        export GOPATH=`pwd`/.go
+    fi
+}
+
+chpwd_functions+=(relative_go)
