@@ -1,22 +1,24 @@
 #!/usr/bin/env sh
 
-STATE_FILE="${TMPDIR}/breakvpn"
-touch $STATE_FILE
-
-LAST_STATE=`cat ${STATE_FILE}`
-
-ifconfig | grep -q tun0
-
-CURR_STATE=$?
-echo $CURR_STATE >| $STATE_FILE
-
-if [ "$LAST_STATE" != "$CURR_STATE" ]; then
-    if [ ${CURR_STATE} -eq 0 ]; then
-        breakvpn youtube.com yelp.com www.yelp.com linkedin.com www.linkedin.com news.ycombinator.com en.wikipedia.org
-    fi
-fi
+# STATE_FILE="${TMPDIR}/breakvpn"
+# touch $STATE_FILE
+# 
+# LAST_STATE=`cat ${STATE_FILE}`
+# 
+# ifconfig | grep -q tun0
+# 
+# CURR_STATE=$?
+# echo $CURR_STATE >| $STATE_FILE
+# 
+# if [ "$LAST_STATE" != "$CURR_STATE" ]; then
+#     if [ ${CURR_STATE} -eq 0 ]; then
+#         breakvpn youtube.com yelp.com www.yelp.com linkedin.com www.linkedin.com news.ycombinator.com en.wikipedia.org service1.ess.apple.com.akadns.net
+#     fi
+# fi
 
 
 #lockfile -r 0 ${TMPDIR}/ || exit 1
 # if [ `curl ifconfig.me` == "" ]; then
 # ifconfig | grep tun0
+
+

@@ -1,3 +1,9 @@
-def eccbytag() {
-    ec2-describe-instances -F"tag:Name=$1"
+def eccbyawesome() {
+    aws ec2 describe-instances --filters "Name=tag:AwesomeName,Values=$1"
+}
+
+def eccbyname() {
+    v=$1
+    shift
+    aws ec2 describe-instances --filters "Name=tag:Name,Values=$v" $@
 }

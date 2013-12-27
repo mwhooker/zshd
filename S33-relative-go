@@ -1,4 +1,7 @@
 #!/usr/bin/env zsh
+export GOPATH="${HOME}/.go"
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOPATH/bin
 
 
 function relative_go()
@@ -8,4 +11,4 @@ function relative_go()
     fi
 }
 
-chpwd_functions+=(relative_go)
+#chpwd_functions+=(relative_go)
